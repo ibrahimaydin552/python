@@ -4,6 +4,7 @@ def carp (x,y) : return x*y
 def bol (x,y) : return x/y
 def usal (x,y) : return x**y
 def modal (x,y) : return x%y
+def yuzdeal(x,y) : return x*y/100
 
 while True:
     sayi = int(input("1. Sayıyı Giriniz: "))
@@ -23,6 +24,10 @@ while True:
             print(f"{sayi}**{sayi2}={usal(sayi,sayi2)}") 
         elif islem in ["mod alma","m"]: 
             print(f"{sayi}%{sayi2}={modal(sayi,sayi2)}")
+        elif islem in ["yüzde alma","%"]:
+            yuzde1 = float(input("Yüzdesi alınacak sayıyı giriniz: "))
+            yuzde2 = float(input("Yüzde Kaçının Alınmasını İstiyorsunuz: "))
+            print(f"{yuzde1} in % {yuzde2} si = {yuzdeal(yuzde1,yuzde2)}")
         cikis = input("Sistemden Çıkmak İster Misiniz? (Evet/Hayır)").lower()
         if cikis in ["evet","e"]:
             print("Güle Güle")
